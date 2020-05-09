@@ -1,0 +1,80 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    {{#if success_msg}}
+    {{message}}
+    <div class="alert alert-info" style="margin: 0px 15px 10px" role="alert">{{success_msg}}</div>
+    {{/if}}
+    {{#if error_msg}}
+    <div class="alert alert-danger" style="margin: 0px 15px 0px" role="alert">{{error_msg}}</div>
+    {{/if}}
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">List of coupons</h1>
+    <hr>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">List of coupons</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="example23" class="display nowrap table table-hover table-striped table-bordered"
+                    cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Value</th>
+                            <th>Points</th>
+                            <th>isActive</th>
+                            <th>isRedeem</th>
+                            <th>Action</th>
+                            <th>Comments</th>
+                            <th>User redeem</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each coupons}}
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>{{value}}</td>
+                            <td>{{points}}</td>
+                            <td>{{isActive}}</td>
+                            <td>{{isRedeem}}</td>
+
+
+
+                            <td>
+                                <form action="/coupon/status" method="post">
+                                    <input type="hidden" name="batch_id" value="{{../batch_id}}">
+                                    <input type="hidden" name="value" value="{{value}}">
+                                    {{#if isActive}}
+                                    <textarea class="form-control" name="comments" cols="5" rows="2"
+                                        required></textarea>
+                                    <br>
+                                    <button class="btn btn-danger btn-md" type="submit">Disable</button>
+                                    {{else}}
+                                    <input type="hidden" name="comments">
+                                    <button class="btn btn-success btn-md" type="submit">Enable</button>
+                                    {{/if}}
+                                </form>
+                            </td>
+                            {{#if comments}}
+                            <td>{{comments}} <br> {{user_who_changed_status}}</td>
+                            {{else}}
+                            <td>N/A</td>
+                            {{/if}}
+                            {{#if mobile_number}}
+                            <td>{{mobile_number}} <br> {{coupon_redeem_timestamp}}</td>
+                            {{else}}
+                            <td>N/A</td>
+                            {{/if}}
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->

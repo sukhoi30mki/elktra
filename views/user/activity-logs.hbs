@@ -1,0 +1,45 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    {{#if success_msg}}
+    {{message}}
+    <div class="alert alert-info" style="margin: 0px 15px 10px" role="alert">{{success_msg}}</div>
+    {{/if}}
+    {{#if error_msg}}
+    <div class="alert alert-danger" style="margin: 0px 15px 0px" role="alert">{{error_msg}}</div>
+    {{/if}}
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">My Activity logs</h1>
+    <hr>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Recent Activity logs</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Ip Address</th>
+                            <th>Browser</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#if activityLogArr}} {{#each activityLogArr}}
+                        <tr>
+                            <td>{{ip}}</td>
+                            <td>{{browser}}</td>
+                            <td>{{timestamp}}</td>
+                        </tr>
+                        {{/each}}{{/if}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

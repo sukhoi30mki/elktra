@@ -1,0 +1,86 @@
+<div id="wrapper">
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+            {{#if success_msg}}
+            {{message}}
+            <div class="alert alert-info" style="margin: 0px 15px 10px" role="alert">{{success_msg}}</div>
+            {{/if}}
+            {{#if error_msg}}
+            <div class="alert alert-danger" style="margin: 0px 15px 0px" role="alert">{{error_msg}}</div>
+            {{/if}}
+            {{#if errors}}{{#each errors}}
+            <div class="alert alert-danger" style="margin: 0px 15px 0px" role="alert">{{msg}}</div>
+            {{/each}} {{/if}}
+            <br>
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Create a subitem</h1>
+                </div>
+                <hr>
+
+                <form action="/product/subitem/add" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <div class="form-group">
+                                <label for="">Select a mainitem</label>
+                                <select name="mainitem_id" class="form-control" id="mainitem_id">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xs-6">
+                            <div class="form-group">
+                                <label for="">Name</label>
+                                <input type="text" name="subItem_name" class="form-control" placeholder="Enter name">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-4 col-xs-4">
+                            <div class="form-group">
+                                <label for="">Image</label>
+                                <input class="form-control" type="file" id="subItemImage" name="subItemImages">
+                            </div>
+                            <div class="help-block form-text text-muted form-control-feedback">
+                                Supported image types are jpg, png.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-xs-4">
+                            <img id="imagePreview" class='responsive-img' src=""
+                                style="height:128px;width:128px;display:none; margin-left: 50px;">
+                        </div>
+
+                        <div class="col-md-4 col-xs-4">
+                            <div class="form-group">
+                                <label for="">Price</label>
+                                <input type="text" name="subItem_price" class="form-control" placeholder="Enter price">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <div class="form-group">
+                                <label for="">Description</label>
+                                <textarea name="subItem_description" class="form-control" rows="5"
+                                    cols="10"> </textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="form-group">
+                        <button class="btn btn-success" type="submit">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

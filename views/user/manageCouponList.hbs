@@ -1,0 +1,47 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    {{#if success_msg}}
+    {{message}}
+    <div class="alert alert-info" style="margin: 0px 15px 10px" role="alert">{{success_msg}}</div>
+    {{/if}}
+    {{#if error_msg}}
+    <div class="alert alert-danger" style="margin: 0px 15px 0px" role="alert">{{error_msg}}</div>
+    {{/if}}
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">In Active coupons</h1>
+    <hr>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">In Active coupons</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Value</th>
+                            <th>Comments</th>
+                            <th>User who changed status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each coupons}}
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>{{value}}</td>
+                            <td>{{comments}}</td>
+                            <td>{{user_who_changed_status}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

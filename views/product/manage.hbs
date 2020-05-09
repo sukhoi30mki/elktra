@@ -1,0 +1,74 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    {{#if success_msg}}
+    {{message}}
+    <div class="alert alert-info" style="margin: 0px 15px 10px" role="alert">{{success_msg}}</div>
+    {{/if}}
+    {{#if error_msg}}
+    <div class="alert alert-danger" style="margin: 0px 15px 0px" role="alert">{{error_msg}}</div>
+    {{/if}}
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">List of items</h1>
+    <hr>
+    <br>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">List of items</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>name</th>
+                            <th>image</th>
+                            <th>description</th>
+                            <th>Mainitem</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each product}}
+                        <tr>
+                            <td>{{data.name}}</td>
+                            <td><img id="imagePreview" class='responsive-img row' alt="CategoryImage"
+                                    src="{{data.image}}" style="width:128px;height:128px; margin-left: 10px;"></td>
+                            <td>{{data.description}}</td>
+
+                            <td>
+                                <form action="/product/manage/mainitem" method="post">
+                                    <input type="hidden" name="category_id" value="{{uid}}">
+                                    <button class="btn btn-primary btn-md">View</button>
+                                </form>
+                            </td>
+
+                            <td>
+                                <form action="/product/category/update" method="get">
+                                    <input type="hidden" name="category_id" value="{{uid}}">
+                                    <button class="btn btn-warning btn-md">Edit</button>
+                                </form>
+
+                            </td>
+                            <td>
+                                <form action="/product/category/delete" method="post">
+                                    <input type="hidden" name="category_id" value="{{uid}}">
+                                    <button class="btn btn-danger btn-md">Delete</button>
+                                </form>
+                            </td>
+
+                        </tr>
+                        {{/each}}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

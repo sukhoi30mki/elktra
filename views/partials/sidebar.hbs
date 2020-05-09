@@ -1,0 +1,20 @@
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+        <div class="sidebar-brand-text mx-3">
+            <img src="/img/logo.jpg" alt="" srcset="" height="62" width="212" style="border-radius: 2px;">
+        </div>
+    </a>
+
+    {{#ifAdmin user role="admin"}}
+    {{> admin_menu}}
+    {{/ifAdmin}}
+
+    {{#ifSubAdmin user role="subAdmin"}}
+    {{> sub_admin_menu}}
+    {{/ifSubAdmin}}
+
+
+</ul>
+<!-- End of Sidebar -->

@@ -1,0 +1,48 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    {{#if success_msg}}
+    {{message}}
+    <div class="alert alert-info" style="margin: 0px 15px 10px" role="alert">{{success_msg}}</div>
+    {{/if}}
+    {{#if error_msg}}
+    <div class="alert alert-danger" style="margin: 0px 15px 0px" role="alert">{{error_msg}}</div>
+    {{/if}}
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Coupon management</h1>
+    <hr>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Coupon management</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Batch Id</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each coupons}}
+                        <tr>
+                            <td>{{batch_id}}</td>
+                            <td>
+                                <form action="/users/coupons/list" method="get">
+                                    <input type="hidden" name="batch_id" value="{{batch_id}}">
+                                    <button class="btn btn-primary btn-md" type="submit">View</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

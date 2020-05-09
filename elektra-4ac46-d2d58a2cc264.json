@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "elektra-4ac46",
+  "private_key_id": "d2d58a2cc2649811fdc23670b161124f8fbe5231",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDAnE166nJXrI7y\n8NUTW0M4oxJxOYZHtHtvsUkoqt/Zmgzpz/uehsxrTFzJWm/rXOcwj/sXMEyO+KlF\nGfK4xeR+TvddYeH9A3Q1rJauq0mv2DgQxh2hcIh1AYDqvZtpmzHcRO/P7pMYgIDb\ny6sqZFylpeAR38vUR9z1jeWS0S6y4C3az6ypClDgEBavrRoxYg/2onfMtWkhnyT8\nqd69NwFVTZHP31jLkdFDFakeGyh+3qn+Z330QH5eTvRr+xL/JtlQY2yVGXwJ/UVG\nnr2fN0ZkfRjyhvea0eHQrAsIe7qFD1Y9IRDV3fJazw31cQD7gNbrArMLOTJ3gSd5\n9qCjNe9jAgMBAAECggEAEyW2ohh6Y3LZBxef5vu0lAXKCI1yZuBvQOw73JoYBLbG\nv9uYJOs7mRMPSkj+RUSICxDVIjn/8lqP4TmyImIx08if2J2pbJCSVd+hXx3SBnQV\nJr27JlhciF0s5qkQsQ/nhgEoYeBSqSXlKXR2wJEXkLQLsVsxFRpLwfFoOA8peEia\nqT39ALzqRMBJ7zCG/V+TSGCPGtCcapVw9tqJmNgGADuftFondN2JAr2xhIsFqiN5\n5BqiAkPhlWt3bf2J2xz5zKDJk05KNTqR6JguYzAoY+8p7Ym1HI8w8U51NJokEq5M\nBQLuedYuc6erlndntdG/uRMH4uGiTsM48UFvwkUR+QKBgQDspDGjb/yqrR6OpFaz\n0hSmfeR168Z+mWTdIcFDAOwAERn/QknrTHTlX6qYJys/kCaXE0u4QdN1wK6Qrsqm\nhRJREE9kq9V/0my2HS+kdLE4ZmbuXvdBzO6EtoPTSQOMqB/decB8mE9/a5rJ1GAr\n4j4/5bM+wl3l0Rwbho5aU4HJDQKBgQDQXgDt4pIRzIWGVfpTwDfkdqp1lahBra4t\nH6c+rCh4v8uuiAJvxlpr25xAik63zwrng9zbtKF1LE0Dh43e6h0kGwpROuJl78iM\nNVYlucSWfvz7/EtGHtJedTmGufRmafxzVBlH3LXZdW1t5KvXDfb3kqkLxCP8W1yc\nLhj6mnyeLwKBgGh3xAIm+iBO9OJ74lrYL42gni8Au0xAY6rLsAnoakdNRXDOzts1\nkZWBOkqZYBpbhO3E8vSQ+s1NFsOApq4EqSVoUeRbh5E6UAvFrranXWVMr7wj6HwA\nAHxOJrwry4lY31hi23slslLKKjdXrm0xH9INkafvHozKV+I+8LEnlHAxAoGAaOGo\nXhVZqRPlcgT9CAMNHzaL/rviAY1GyvfP20AU7xK7l5Jmh5S0Fu5n7CSyEttohbhe\nB0kYrD4sVcZ5pub43B+wRcr6Ao17yPdf8YVcatRoyv3nddg10831stcPKi3XIMYI\nI5/4+QiemF4uEQW6dkugQ4frBS+HoiWh9SKl74kCgYEAiUAxG2ruk+4n4+CLfx/F\nG6njA99h6FTVq+ffOd0ST9W5eIfb5PhResdpD9BqP5bu7Gu1Ax/GzVzzVqWOrpLj\ndurjDOR8xRloQ+muGPtlD4Ls1s6RtbzamsElvoJ/LloeQIC1a6dESlCfvyir/vYS\nW0zqACmjuLOMLzxKiOvL498=\n-----END PRIVATE KEY-----\n",
+  "client_email": "elektra-account@elektra-4ac46.iam.gserviceaccount.com",
+  "client_id": "102190006638105909424",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/elektra-account%40elektra-4ac46.iam.gserviceaccount.com"
+}
